@@ -78,7 +78,11 @@ Here is another problem:
 
 with Black to play & win. The key move for black is 2-7 !! White replies 11x2, and the new king HAS to stop at 2 to be crowned, it cannot go on and make further jumps. Black now plays 1-5, White must jump 2x9 and black wins with 5x14x23x32. 
 
-Now a harder problem: W 6,10,14,15,18,19,22,23,27 : B 1,3,7,12,K13,20,K25,26 White to play and win. (Composed by World champion Derek Oldbury) 
+Now a harder problem: 
+- W 6,10,14,15,18,19,22,23,27
+- B 1,3,7,12,K13,20,K25,26
+
+White to play and win. (Composed by World champion Derek Oldbury) 
 
 <img src="orac-screen3.png" width="320">
 
