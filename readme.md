@@ -1,16 +1,17 @@
-##ORAC DRAUGHTS
+
+## ORAC DRAUGHTS 
 
 
 ORAC is a (fairly) strong 6502 checkers playing program. Its was originally written a long time ago for the PET, then later adapted for the Commodore 64 and Commodore 16.
 
 Files in this archive:
 
--orac-c64.prg   - Commodore 64 version.
--orac-c16.prg   - Commodore 16/Plus 4 version.
--orac-pet.prg   - Commodore PET version. (BASIC 2.0, PET 30xx/2001)
--orac88pet.prg  - Original PET version. Originally  written and hand-patched on a PET.
--orac.s         - Source code for above, compiles with CA65 or ASM502. Released as free under GPL3 licence.
--orac.txt       - This document. Includes tutorial on checkers.
+- orac-c64.prg   - Commodore 64 version.
+- orac-c16.prg   - Commodore 16/Plus 4 version.
+- orac-pet.prg   - Commodore PET version. (BASIC 2.0, PET 30xx/2001)
+- orac88pet.prg  - Original PET version. Originally  written and hand-patched on a PET.
+- orac.s         - Source code for above, compiles with CA65 or ASM502. Released as free under GPL3 licence.
+- orac.txt       - This document. Includes tutorial on checkers.
   
 To get a quick idea of the game, try running ORAC using the auto-play feature (A command) from a new board with different IQ settings.
 For more technical detail, see "PROGRAM NOTES" at end..
@@ -19,7 +20,7 @@ For more technical detail, see "PROGRAM NOTES" at end..
 
 ***
 
-###COMMAND SUMMARY
+### COMMAND SUMMARY
 
 ```
 #-# - Enter your own move. (ie. 11-15 <RETURN>) 
