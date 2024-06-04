@@ -63,7 +63,7 @@ Draughts (or Checkers) is a much under rated and neglected game, often derided a
  +----------------+
 ```
 
-<img src="pathto/orac-screen1.png" width="320">
+<img src="orac-screen1.png" width="320">
 
 DRAUGHTS is traditionally played on the BLACK squares of an 8 by 8 chess board The squares are numbered from 1 (bott right) to 32 (top left), with black men on squares 1-12 and white on squares 21-32. Men move diagonally forward onto empty squares, or jump over and capture an opponent if there's a clear space behind it. One VERY important rule - IF YOU CAN JUMP, YOU MUST! If, after jumping, the same piece can jump again, IT MUST! One exception to this rule - when a man reaches the KING-ROW (the 8th), and is made into a KING, it may NOT make any further jumps - until the next move! When a man becomes a KING, it can move in all 4 diagonal directions. When one side has no legal moves left, that side loses the game! The most important rule is that if you can jump YOU MUST! This leads to fascinating combinations, often sparked by cunning material sacrifice. 
 
@@ -74,7 +74,7 @@ Here is another problem: B 1,2,6 : W 11,18,27 with Black to play & win. The key 
 
 Now a harder problem: W 6,10,14,15,18,19,22,23,27 : B 1,3,7,12,K13,20,K25,26 White to play and win. (Composed by World champion Derek Oldbury) 
 
-<img src="pathto/orac-screen3.png" width="320">
+<img src="orac-screen3.png" width="320">
 
 ORAC can see the 17 move solution in a few minutes on IQ30: 27-24! 20x27, 14-9, 7x14, 15-11, 1x10, 11-7, 13x6, 18x9x2, 25x18, 23x14, 10x17, 19-16, 3-10, 2-6, 12x19, 6x15x24x31x22x13 and White wins.
 
