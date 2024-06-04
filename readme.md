@@ -15,7 +15,7 @@ Files in this archive:
 To get a quick idea of the game, try running ORAC using the auto-play feature (A command) from a new board with different IQ settings.
 For more technical detail, see "PROGRAM NOTES" at end..
 
-<img src="pathto/orac-screen1.png" width="320">
+<img src="orac-screen1.png" width="320">
 
 ***
 
