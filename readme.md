@@ -16,11 +16,11 @@ Main files in this archive:
   orac.txt       - This document. Includes quick tutorial on checkers.
 ```
 
-<img src="pathto/orac-screen1-c64.png" width="320">
+<img src="orac-screen1-c64.png" width="320">
 
 ***
 
-###COMMAND SUMMARY
+### COMMAND SUMMARY
 
 ```
 Cursor up/down/left/right & SPACE - Move cursor and select move. (first the piece to move, then destination)
@@ -52,7 +52,7 @@ F7  - Change black piece colour.    (F7 key)  (C16: CTRL-G)
 
 ***
 
-###PLAYING THE GAME
+### PLAYING THE GAME
 
 You can enter your move by using the Cursor keys to move up/down/left/right, then hit SPACE to select the piece you want to move. Repeat to select the destination square. You can also make moves by typing in the from-to square numbers, followed by RETURN. To show the square numbers, hit N <RETURN>. When playing the game, remember that IF YOU CAN JUMP, YOU MUST! This is a very important rule. For a short tutorial on playing the game, see the end of this document. 
 
@@ -63,7 +63,7 @@ In end games (with Kings) Randomisation will improve ORAC's play, try setting M3
 To get a quick idea of the game, try running ORAC using the auto-play feature (A command) from a new board with different IQ settings.
 
 
-###TECHNICAL DETAILS
+### TECHNICAL DETAILS
  
 Compiling ORAC is simple: using my own open source assembler ASM502:
    asm502 orac.s orac.prg >orac.lst    
@@ -102,12 +102,12 @@ Now follows a short tutorial on the game, since checkers is not so widely played
 
 ***
 
-###INTRODUCING THE GAME OF CHECKERS (ENGLISH DRAUGHTS)
+### INTRODUCING THE GAME OF CHECKERS (ENGLISH DRAUGHTS)
  
 Draughts (or Checkers) is a much under rated and neglected game, often derided as a 'kids' game, and looked down upon by exponents of games like chess. This view is unjustified, as the game offers characteristics and subtleties simply not found in any other board game. And despite of over 200 years of research and analysis of the game, there is still plenty of new play to be found by the adventurous player. In a way, the virtue of the game is actually in its limited piece movement and mobility, since this forces you think in terms of warding off threats at a much deeper level than you would do in a game like chess, that has a larger mobility. Back in the day, there were clubs, tournements, magazines and even newspaper columns dedicated to the game. Let us look at the rules...
 
 ```
- +----------------+                                                                             
+ +----------------+       
  |::32::31::30::29| 
  |28::27::26::25::|
  |::24::23::22::21|
@@ -119,7 +119,7 @@ Draughts (or Checkers) is a much under rated and neglected game, often derided a
  +----------------+
 ```
 
-<img src="pathto/orac-screen2-c64.png" width="320">
+<img src="orac-screen2-c64.png" width="320">
 
 DRAUGHTS is traditionally played on the BLACK squares of an 8 by 8 chess board The squares are numbered from 1 (bott right) to 32 (top left), with black men on squares 1-12 and white on squares 21-32. Men move diagonally forward onto empty squares, or jump over and capture an opponent if there's a clear space behind it. One VERY important rule - IF YOU CAN JUMP, YOU MUST! If, after jumping, the same piece can jump again, IT MUST! One exception to this rule - when a man reaches the KING-ROW (the 8th), and is made into a KING, it may NOT make any further jumps - until the next move! When a man becomes a KING, it can move in all 4 diagonal directions. When one side has no legal moves left, that side loses the game! The most important rule is that if you can jump YOU MUST! This leads to fascinating combinations, often sparked by cunning material sacrifice. 
 
@@ -130,7 +130,7 @@ Here is another problem: B 1,2,6 : W 11,18,27 with Black to play & win. The key 
 
 Now a harder problem: W 6,10,14,15,18,19,22,23,27 : B 1,3,7,12,K13,20,K25,26 White to play and win. (Composed by World champion Derek Oldbury) 
 
-<img src="pathto/orac-screen3-c64.png" width="320">
+<img src="orac-screen3-c64.png" width="320">
 
 ORAC can see the 17 move solution in a few minutes on IQ30: 27-24! 20x27, 14-9, 7x14, 15-11, 1x10, 11-7, 13x6, 18x9x2, 25x18, 23x14, 10x17, 19-16, 3-10, 2-6, 12x19, 6x15x24x31x22x13 and White wins.
 
@@ -160,6 +160,6 @@ The 11-15 move deserves special consideration - it is draughts equivalent to E2-
 - 10-14, (Denny opening) 23-19,11-16,26-23,9-13,24-20? This loses to 14-17! 21-14, (20-11,17-26,31-22,8-31 loses) 6-10,20-11,10-26,31-22,8-31 and Black wins.
 - 10-15, (Kelso opening) 23-19,6-10,22-17,11-16?? a loser! 17-13!, 16-23, 13-6, 2-9,27-18-11-2 and White wins.
 
-***
+-----
 
 The source code is released as free software under the GNU GPL3 licence, see GNU website:      www.gnu.org/licenses/gpl-3.0.html 
