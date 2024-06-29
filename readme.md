@@ -123,12 +123,16 @@ Draughts (or Checkers) is a much under rated and neglected game, often derided a
 
 DRAUGHTS is traditionally played on the BLACK squares of an 8 by 8 chess board The squares are numbered from 1 (bott right) to 32 (top left), with black men on squares 1-12 and white on squares 21-32. Men move diagonally forward onto empty squares, or jump over and capture an opponent if there's a clear space behind it. One VERY important rule - IF YOU CAN JUMP, YOU MUST! If, after jumping, the same piece can jump again, IT MUST! One exception to this rule - when a man reaches the KING-ROW (the 8th), and is made into a KING, it may NOT make any further jumps - until the next move! When a man becomes a KING, it can move in all 4 diagonal directions. When one side has no legal moves left, that side loses the game! The most important rule is that if you can jump YOU MUST! This leads to fascinating combinations, often sparked by cunning material sacrifice. 
 
-Consider this problem:- Black Man on 4, Black king on 6, White men on 7 and 12. Black to play and win. To set this up in ORAC type: C <RETURN> B4 <RETURN> BK6 <RETURN> W7 <RETURN> W12 <RETURN> . (or B 4,K6 : W 7,12 in standard notation.) 
+Consider this problem:- Black Man on 4, Black king on 6, White men on 7 and 12. Black to play and win. To set this up in ORAC type: C <RETURN> B4 <RETURN> BK6 <RETURN> W7 <RETURN> W12 <RETURN> . 
+(or B 4,K6 : W 7,12 in standard notation.) 
 The winning move is 4-8! White MUST jump 12x3, its man at 3 becoming a king. Now black moves his king 6-2!! White now only has 1 move, 3-8, since its man at 7 cannot move, and Black simply jumps the 2 pieces 2x11x4 and wins! 
 
-Here is another problem: B 1,2,6 : W 11,18,27 with Black to play & win. The key move for black is 2-7 !! White replies 11x2, and the new king HAS to stop at 2 to be crowned, it cannot go on and make further jumps. Black now plays 1-5, White must jump 2x9 and black wins with 5x14x23x32. 
+Here is another problem: 
+B 1,2,6 : W 11,18,27 with Black to play & win. The key move for black is 2-7 !! White replies 11x2, and the new king HAS to stop at 2 to be crowned, it cannot go on and make further jumps. Black now plays 1-5, White must jump 2x9 and black wins with 5x14x23x32. 
 
-Now a harder problem: W 6,10,14,15,18,19,22,23,27 : B 1,3,7,12,K13,20,K25,26 White to play and win. (Composed by World champion Derek Oldbury) 
+Now a harder problem: 
+W 6,10,14,15,18,19,22,23,27 
+B 1,3,7,12,K13,20,K25,26 White to play and win. (Composed by World champion Derek Oldbury) 
 
 <img src="orac-screen3-c64.png" width="320">
 
