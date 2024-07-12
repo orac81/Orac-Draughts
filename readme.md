@@ -7,6 +7,7 @@ Download dynamo v9.18 with source:
   <https://github.com/orac81/Orac-Draughts/raw/main/dyna918a.zip>
   
 You can view more details and a manual here:
+<https://github.com/orac81/Orac-Draughts/blob/main/dynamo.txt>
 
 
 ## ORAC DRAUGHTS
