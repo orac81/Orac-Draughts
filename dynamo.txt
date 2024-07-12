@@ -1,0 +1,571 @@
+          DYNAMO DRAUGHTS
+         -----------------
+
+    Copyright A.Millett 1992-2024.
+
+This program is now released as open source software, under the GPL3 license.
+  (See www.gnu.org for license terms and details)
+In addition, Original author attribution must be kept with any derived version.
+
+DYNAMO DRAUGHTS is a DOS program that plays a number of Draughts/Checkers 
+variants - International (10x10), Canadian (12x12), Spanish (8x8), 
+American Pool, Portugese and Russian (8x8) games. It can also be configured 
+to play irregular/experimental board sizes like 12x10, 10x8, 9x9, etc.
+
+  There are 2 versions in this zip file: in the DOS directory is the MSDOS
+version of the program DYNA2K.EXE (Version 8.15).
+In the WIN32 directory is an experimental console-only version of Dynamo
+DYNAMO.EXE (Windows 32 bit) and DYNAMO.ELF (Linux 32 bit). This is
+text-only, but it will compile & run directly on modern computers.
+For more about this version, see notes at end of this document.
+
+  The original shareware version was quite widely copied via 
+Shareware libraries, disk magazines, etc. The full version 
+supplied here has many features not available on the shareware
+version - stronger play levels, game database save/load, etc.
+This "WINDOS" version provides a sort of Mouse/Windows interface
+running under DOS.
+
+It will run under MSDOS emulators like "DOSBOX". However it will be slow
+under such emulators, and will be much faster/stronger (maybe as much as 100x)
+using a real version of DOS (or a "Virual PC" running a version of DOS) if 
+your computer can support it. Some boot loaders like GRUB4DOS can be set 
+up to boot FREEDOS from a disk directory or an MSDOS floppy disk 
+image file, to which you can add / run DYNAMO at full speed.
+
+Note that DYNAMO was the first program to use PDN format to save/load draughts 
+games to a database, since I was the original proposer of the standard.
+
+For more notes on the source code, compiling etc, see end of this file.
+
+Some original program documentation (from the 1990's) follows..
+
+=======================================================================================================
+
+  Welcome to Dynamo Draughts! DYNAMO runs under MSDOS and provides a 
+simple Windows style interface for the user.
+The aim of this program is to introduce the International variation 
+of draughts to the UK/USA, and hopefully get people interested in 
+this game. DRAUGHTS has always suffered in comparison with CHESS - 
+this is a great shame, as both the ENGLISH 8 by 8 and the 
+INTERNATIONAL 10 by 10 are very subtle and complex games,
+the 10x10 game is highly regarded in Europe, with many players.
+  Note how powerful the sweeping kings are in the continental game
+- the side that gets an early king usually has a decisive advantage.
+One rule that throws beginners is the one that stipulates that you
+MUST jump the maximum number of opponents, when given a choice.
+This is necessary to enable the winning side to force some of the
+endgames - you will get the idea when you are on the recieving end
+of the computers shots. If you ever find yourself unable to make
+a move, don't blame the program - you are probably trying to make
+an illegal move! You can hit F1 to display all possible moves.
+  DYNAMO can also play the SPANISH and POOL variants of draughts - 
+see below for details on these games. The ENGLISH version
+of draughts is implemented in the BLITZ and SAGE programs.
+
+          COMMAND SUMMARY
+          ---------------
+  Using DYNAMO with the mouse is easy - you can just click the LEFT
+button on source (and if required destination) squares to make a move.
+If the computer refuses to let you move, you have probably overlooked
+something - remember if you can jump YOU MUST! Clicking the RIGHT MOUSE
+button will make a pull-down menu appear. The TOOL-BOX button block
+at the top right can be used to select a number of functions - when
+you click the mouse on the button, a short help-text will appear.
+BOTH left and right mouse buttons serve functions on these tool-keys.
+  If you prefer to use the keyboard, you can hit F9 to enable a cursor,
+When playing, move your cursor by using the numbers around the '5' on
+the numeric keypad and hit RETURN to select piece. Think of the keypad as
+a compass, with the numbers around the central '5' steering you in a given
+direction - ie. the '7' key moves you up-left. If the piece you select is
+able to move in more than one direction, you will then need to select a
+direction key (1,3,7,9). KING moves may require you to select a DESTINATION
+square, and hit RETURN.
+  If you have a MOUSE you can simply click the left button on source and
+destination squares. You can use the right mouse-button to get
+pull-down menus. To abort the computers thinking, hit the ESC
+key ONCE, or hit CTRL-F to force an early move.
+
+Many of the functions below are also available with the mouse through 
+the TOOL-BOX..
+
+ ESC - Abort game, go back to main menu.
+ -,+ - Step forward/backward through game - use TAPE CONTROLS for
+       Step +/- 10 and Beginning/end functions.
+ F1  - Show this HELP file - use cursor/PgUp/PgDn, or mouse buttons.
+ F2  - Make me take your go - so that you swap sides with computer.
+ F3  - Auto-play. (Hit ESC to end)
+ F5  - Toggle Two-player/Setup mode on/off - Allows moves without comp reply.
+ F6  - Invert board, so that BLACK is at bottom.
+ F7  - Switch sound on/off.
+ F9  - Enable/Kill flashing cursor.
+F10  - Show moves, ie. all of your movable pieces.
+  *  - Show ordering information.
+  p  - Change colour palettes.
+  n  - Start a new game.
+  u  - Undo a move. (For more navigation, use tape controls in TOOL-BOX)
+  .  - Display board numbering.
+  l  - Load a game file from disk - full version allows you to select
+       database name first, then browse through the games with 
+       Cursor up/down/PgUp/PgDn. The current game number of the game at
+       the top of the screen is shown - when you hit LOAD (or RETURN)
+       that game is loaded. The database is stored in PDN text-format,
+       and can be altered with a text editor. Comments appear in {}
+       and the game must end with a "*".
+CTRL-B - Toggles the Computers Best line of play THINK-DISPLAY on/off.
+       Also shows any comment text when best-line is off.
+CTRL-I - Invert square colours.
+CTRL-N - Toggle to algebraic CHESS notation, or back to numbers.
+CTRL-K - Invert notation, ie. change A1 from bot left to top right.
+       The above 2 commands are useful because there are so many
+       different systems for numbering moves worldwide.
+       (NOTE you may need to select NEW-GAME for last option to come into effect.)
+CTRL-T - Set time-per-move control in seconds per move. If set to zero, fixed level
+       search is set via IQ command: /I1 <ENTER> upto /I199 <ENTER>
+CTRL-D - Toggle opening book on/off. This allows user editing of the database, with large
+       opening books supplied.
+
+
+ s   - Save current game to database. Enter a filename when prompted,
+       and game and comments is added to selected PDN file.
+ l   - Load a game from database - allows user selection of database,
+       no size limits. see above..
+ o   - Output game moves to screen or printer.
+ CTRL-J - Toggles display of full jump-moves on output-game.
+ CTRL-P - Print a board position. (PRO version)
+ CTRL-O - Output control codes to printer. (PRO version)
+ c   - Change/Enter Game-comment text - Enter information for 
+       Event, White, Black, Result code ( standard options 
+       1-0,1/2-1/2,0-1,* fow win/draw/loss/no result)
+ CTRL-Y - Show statistics on current position.
+ y   - Load an old-format DYNAMO game file.
+ z   - SAVE an old-format DYNAMO game file.
+       The 2 commands above allow the user to swap info with
+       previous versions of DYNAMO.
+ 
+    POSITION EDIT commands..
+ x   - Exchange side to play for EDIT. (use F2 to swap sides with comp)
+ &   - (SHIFT-7) Clears the whole board. (or use TOOL-BOX)
+ e,k,w,b,W,B - Set current square to empty/killed/white/black Man/K.
+       To use the above commands, move the CURSOR to the square you want
+       to edit, and hit e/k/w/b/W/B. When you KILL a square it becomes
+       non-playable - ie. for novelty board shapes, etc. NOTE - when
+       you edit the board, you lose stored moves up to that point -
+       ie. the board becomes a new START POSITION.
+
+
+   Advanced commands..
+  
+ CTRL-L  - Load and use user-edited opening book.
+ CTRL-X  - Toggle problem-solve search mode on/off.
+ CTRL-E  - Infinite search mode - search until CTRL-F hit.
+ /       - Advanced setting of internal engine parameters.
+ CTRL-P  - Print current board position as diagram.
+ CTRL-O  - Set printer control codes.
+ v       - Quick-View current PDN database.
+ d       - Search book-database for all lines that transpose
+           into the current position, and show the lines that match.
+ CTRL-V  - Validate current book database.
+ i       - Change IQ  (Only used if TIME is zero) WARNING - very high IQ's
+           can take forever! Generally you should set a target response
+           time. This can be used to perform a fixed-ply depth search.
+ Z       - Advanced auto-tournement mode - allows user to play one
+           set of parameters against another over a series of games,
+           giving a game result. This can help fine tune the strongest
+           parameters.
+ 
+ DYNAMO plays RUSSIAN, PORTUGESE, CANADIAN (12x12) and BRAZILIAN variants of draughts.
+ 
+More advanced features are available on the PRO version - see you
+DYNAMO PRO MANUAL if you are using that version.
+DYNAMO can be customised for multiple languages by editing 
+the DYLANG1.TXT/DSLANG1.TXT file- copy this to DY/DSLANG2.TXT
+for language # 2, etc. See the comments in this file for more info. 
+Similarly translations of this help file, named DYNAMO2.DOC, etc, can
+be used to supply multi-language help.
+The "STtoolboxtext" and "STtoolboxkeys" can be altered to 
+customise the functions used by the TOOL-BOX.
+Be careful when changing the language files - only the
+text in quotes should be altered, and some texts are
+critical in length/content.
+If you write ary useful translations, please EMAIL them to us below.
+
+          PLAYING THE GAME
+          ----------------
+
+         +--------------------+  Black side, moving down..
+         |:: 1:: 2:: 3:: 4:: 5|
+         | 6:: 7:: 8:: 9::10::|
+         |::11::12::13::14::15|
+         |16::17::18::19::20::|
+         |::21::22::23::24::25|
+         |26::27::28::29::30::|
+         |::31::32::33::34::35|
+         |36::37::38::39::40::|
+         |::41::42::43::44::45|
+         |46::47::48::49::50::|
+         +--------------------+   White side, moving up.
+
+  INTERNATIONAL DRAUGHTS is traditionally played on the BLACK squares of a
+10 by 10 board - DYNAMO can re-size the board, but for clarity let us
+discuss the INTERNATIONAL game. The squares are numbered from 1 (top left) 
+to 50 (bot right), with black men on squares 1-20 and white on squares
+31-50. Men can move diagonally forward 1 step onto empty squares, or
+jump over and capture an adjacent opponent's piece IN ANY DIRECTION,
+if there's a clear space immediately behind it - Note that men can
+leap BACKWARDS, unlike the english game. One very important rule -
+IF YOU CAN JUMP, YOU MUST! If, after jumping, the same piece can make
+futher leaps - IT MUST DO SO. Futhermore, if you have an option of
+more than one series of jumps, YOU MUST TAKE THE OPTION(S) THAT
+CAPTURES THE MAXIMUM NUMBER OF PIECES.
+  When a man reaches the top row of the board, it becomes a KING.
+In International draughts, Kings can sweep any distance along a diagonal,
+rather like bishops in chess. Futhermore they can leap an opponent,
+land on any space beyond, and then make futher leaps - in a different
+direction if necessary. You are still forced to make moves that jump
+the maximum number of opponents!
+  One final rule - a man is not crowned until the end of a multijump
+sequence - ie. a man can leap into and then backwards out of the KING
+ROW without being crowned - it is only crowned if it finally  comes
+to rest on the king row.
+  The best way to get to grips with the rules, and get the feel of
+the game is to look at some actual play - you can try setting up
+and replaying the following games on DYNAMO - either by entering the
+position & moves yourself with the F5 keys or position edit functions,
+or simply loading the game file - I have left given sample games on the
+disk.
+  To understand the nature of 10x10 draughts, you need to look at the
+nature of the pieces. Notice how powerful the kings are in the game
+- as a very rough guide, you can say that your first king is worth 3 men,
+although this can vary widely, depending on how your opponent is
+positioned. For instance, if both sides have a king, subsequent kings are
+worth a lot less. It is also important to note that even if one side
+is reduced to only 1 king, the opponent will generally need 4 kings
+to trap it and force a win - although sometime he can do it with
+3. For this reason, it is generally considered important to get the
+first king - then, unless you opponent is able to quickly recapture
+it or break through himself, he will lose.
+  This consideration of kings gives us clues on how to play the opening
+and mid-game with the men. Your prime objective is to prevent your
+opponent breaking through for a king - however, since men can jump
+backwards, this does liberate you from having to keep large forces
+on the back rank - an advanced man can still prevent the enemy sneaking
+around the back of him. On the other hand, it is not desirable to
+push pieces to far forward too early - an isolated man that is too far
+advanced can often be lost early on. As a rule of thumb, try to keep
+your forces centralised in an effective block of pieces, rather than
+broken up into scattered men - large blocks of pieces are more immune
+to enemy traps and shots, and can be used to engineer your own shots.
+The concept of traps and shots is very important in all the variants
+of Draughts - the fact that you MUST jump, and jump the MOST, make
+these powerful weapons. Even if your enemy doesn't walk directly into
+your trap, you can often use a long-standing threat of a trap to
+force your opponent into making weak moves.
+  Let us consider some real play - perhaps first we should look at
+some shots - here are some I have encountered when playing DYNAMO
+myself. They demonstrate the importance of tactics in this game.
+(see sample database DBASE0.PDN to load/replay this game)
+
+Me (white) vs Dynamo PRO version 6.3 (black, 5 seconds a move) Dec 1993
+
+  1. 32-28 17-21      2. 37-32 21-26      3. 41-37 19-23
+  4. 28-19 14-23      5. 33-28 13-19      6. 46-41 10-14
+  7. 34-30 8-13       8. 30-25 20-24      9. 39-33 2-8
+ 10. 43-39 5-10      11. 49-43 12-17     12. 31-27 17-21
+ 13. 39-34 ... forms diagram position below..
+
++------------------------------+
+|::: x :::   ::: x ::: x :::   |    x = Black men moving down.
+| x ::: x ::: x ::: x ::: x :::|
+|::: x :::   ::: x ::: x ::: x |
+| x :::   ::: x ::: x :::   :::|
+|::: x :::   ::: x ::: x ::: o |
+| x ::: o ::: o :::   :::   :::|
+|:::   ::: o ::: o ::: o ::: o |
+| o ::: o ::: o :::   ::: o :::|
+|::: o ::: o ::: o ::: o ::: o |
+|   ::: o ::: o :::   ::: o :::|   o = White men moving up.
++------------------------------+
+Consider this position, with Black to move and win - Dynamo
+suprised me with this shot!
+
+ 13.  ...  26-31!!   14. 37-17 11-31     15. 36-27 16-21
+ 16. 27-16 18-22     17. 28-17 24-30     18. 35-24 19-46
+ 19. 47-41 46-11     20. 38-33 11-39     21. 43-34
+and black has a winning advantage in material.
+
+  Here is a game I played against a much earlier version of DYNAMO
+running on a humble 386 computer at 3 seconds a move. This shows that
+you don't need fancy hardware to get a good game from DYNAMO!
+(see sample database DBASE0.PDN to load/replay this game)
+
+Me (white) vs DYNAMO 4.6 (black). Feb 1993.
+
+  1. 32-28 17-21      2. 37-32 11-17      3. 34-30 21-26
+  4. 41-37 6-11       5. 30-25 20-24      6. 31-27 17-21
+  7. 46-41 18-23      8. 40-34 13-18      9. 34-30 11-17
+ 10. 28-22 17-28     11. 33-13 9-18      12. 38-33 forms this diagram..
+
++------------------------------+
+|::: x ::: x ::: x ::: x ::: x |  x = Black
+|   ::: x ::: x :::   ::: x :::|
+|:::   ::: x :::   ::: x ::: x |
+| x :::   ::: x ::: x :::   :::|
+|::: x :::   ::: x ::: x ::: o |
+| x ::: o :::   :::   ::: o :::|
+|:::   ::: o ::: o :::   ::: o |
+| o ::: o :::   ::: o :::   :::|
+|::: o ::: o ::: o ::: o ::: o |
+|   ::: o ::: o ::: o ::: o :::|  o = White
++------------------------------+
+
+ Black to move and win - can you see it?
+
+ 12  ...   14-20!
+ 13. 25-14 23-28     14. 33-13 26-31     15. 37-17 12-21
+ 16. 14-23 8-46      17. 30-19 46-14     18. 27-22
+ and DYNAMO has a substantial material advantage.
+
+
+    SPANISH, AMERICAN POOL and RUSSIAN games
+    ----------------------------------------
+  Ok, having covered the 10x10 INTERNATIONAL draughts game, we shall look
+at the other games that can be played by DYNAMO. You select these games
+from the TITLE screen of DYNAMO, with the F7 key. Now all these games have
+the powerful sweeping kings from the INTERNATIONAL game, so a lot of the
+tactics discussed above will also apply to these games, although some of
+the rule differences affect strategy. Also the smaller 8x8 board changes
+the nature of the game - it is generally necessary to keep some men back
+on the back rank as a defensive measure.
+
+  The SPANISH game is played on an 8x8 board, with one unusual feature:
+the long diagonal runs from bottom right to top left - ie. the board is
+'inverted'. While this looks unusual, historically this setup is the
+original. The other difference in SPANISH draughts is that men are not
+allowed to make backward jumps. In other respects the game is the same
+as European (International) Draughts, ie. kings sweep diagonals, and
+you are obliged to take the maximum number of pieces.
+  Just as a little sample, here is a game of SPANISH draughts illustrating
+a neat little trap. Note how the 17-13 move forces the advantage - all
+captures are compulsory! Once black has that early king, white is
+powerless. You can play this game on DYNAMO by using two-player mode 
+(Hit F5).
+  10-14, 22-18, 12-15, 23-20, 5-10, 27-22,   1-5, 20-16,  14-19, 21-17, 
+  10-14, 25-21,  5-10, 30-27,  7-12, 16-7,  3-12, 27-23, 12-16?, 17-13!,
+  10-17, 23-20, 16-23, 24-20, 15-24, 22-15, 11-20, 28-19-10-3=K.. 
+  for black win.
+
+  The POOL DRAUGHTS game is played on a normal 8x8 board. The game is popular
+in the USA, and gets its curious name from POLISH draughts - POOL is a
+corruption of this! In this game you are NOT obliged to take the route that
+jumps the maximum number of pieces - you have a free choice. However you are
+still forced to jump when you can, and kings may NOT pass-up jumps in
+a multi-jump sequence by landing on 'quiet' squares - they must take
+all opportunities until the sequence is over. This rule is easier to see
+than describe - try it out! There is a special opening book supplied with
+the PRO version of DYNAMO for pool, see POOLBOOK.DOC on the disk.
+  The board is numbered in the same way as the ENGLISH game - however the
+strategy is rather different. Again, limited space prevents further analysis
+of this fine game, but you will find DYNAMO a mean opponent! Here
+are a number of demonstration games, showing interesting tactical traps..
+
+ (Browse the database DBASE2.PDN)
+1>11-16 23-18 16-20 24-19 8-11? A natural looking move, but a loser.
+ 19-15! 10-19 27-24 20-27 31-8 4-11 18-14  9-18 22-8   and White gets a king
+ and wins.
+ 
+2>9-14 22-18 6-9 26-22 12-16 24-19? 9-13! 18-9 5-14 19-12 14-17 21-14
+ 10-19 and Black is a piece up.
+ 
+3>11-15 23-18 8-11 26-23 9-13 23-19 4-8? Beware of moving back men -
+ you may offer your opponent a king! 19-16! 12-19 18-14 10-26 30-16
+ 11-20 21-17 13-22 25-4 and White wins.
+ 
+4>11-15 23-19 8-11 22-17 9-14 27-23 15-18 32-27? 12-16! 19-12 10-15 17-19
+ 11-16 23-14 16-32 and Black wins.
+ 
+5>10-15, 23-18,12-16,21-17,16-19,17-14,8-12? This move loses to this
+ tactical exchange : 22-17!,15x13,24x8,9x18, 26-22, 4x11,22x8, and now
+ Black must give a piece to stop the king 7-11,8x15 and White, a piece
+ up, should win.
+ 
+6>11-16,24-19,8-11,22-18,10-14,25-22,6-10,29-25,1-6? This fatally
+ weakens Blacks back rank, allowing a break-through thus :-19-15!,10x19,
+ 22-17,7-10,18-15,11x18,26-22,19x26,22x15,10x19,17x1 & Whites king wins.
+ 
+7>11-15 23-19 8-11 26-23 9-14 22-17 6-9 17-13 1-6 30-26 4-8 25-22? A
+ fatal mistake.. 12-16! 19-12 14-18 23-14 10-17 21-14 9-25 29-22 15-19
+ 24-15 11-25 and Black wins.
+ 
+8>10-15 23-18 12-16 26-23 8-12 24-19 15-24 28-19 7-10 27-24 16-20?
+ Blacks attack on Whites right flank fails to 31-26! 20-27 18-14 9-18
+ 22-8 27-18 26-22 4-11 22-8 and White wins. Black does have other options,
+ but all lead to defeat - try them against DYNAMO!
+ 
+9>11-15 24-20 15-19 23-16 12-19 27-24 10-15 31-27? The evacuation of the back
+ square 31 is a loser here - whatever path White takes, Blacks deadly
+ tactical threats win the day.. 9-14! 27-23 8-12 23-16 12-19 32-27 3-8 27-23
+ 8-12 23-16 12-19 22-17 7-11 17-10 11-16 20-18 6-31 and Black wins.
+ 
+10>11-15 22-18 15-22 26-17 8-11 24-19 11-16 17-13 9-14 25-22 4-8 22-17
+ 8-11 29-25? This loses to this really neat combination.. 14-18! 23-14
+ 16-23 27-18 10-15 25-22 11-16 18-20 6-9 13-6 2-25 and Black wins.
+ 
+When pulling a shot, you should beware that your opponent does not have
+something up his sleeve in reply, or you could be a victim of the BOOMBERANG
+shot...    (see TRAP01.POL on disk)
+White: 12,18,23,24,26,28,30   Black: 2,3,6,7,11,13,21    
+  6-10! A cunning move, that lures White into playing what he thinks is a
+  winning shot.. 18-14? 10-17 26-22 17-19 24-8 and White thinks he has a
+  king, and is home and dry, but.. 21-25!! 30-21 13-17 21-14 7-10 14-7 2-4
+  and Black has the 'move' against Whites men .. 28-24 4-8 24-19 8-11 and
+  Black wins.
+  
+Along similar lines, here is another super shot.. (TRAP02.POL on disk)
+White: 17,19,21,22,23,25,27,28,30,31,32  Black: 1,2,3,4,6,10,11,12,14,16,20
+  3-7! Again, the bait is dangled.. 19-15? 10-26 17-3 26-17 21-14 However
+  Whites king is short-lived.. 20-24!! 27-20 11-15 20-18 2-7 3-10 6-29 and
+  White is lost.
+  
+By the way, DYNAMO can see & analyse all the above shots, although he
+will sometimes play a different line to the main lines given above. The
+above games and problems are taken from an excellent book 'Tournement
+Checkers', by Vladimir Kaplan, ISBN 0-8008-4205-7 - although I don't know
+if it is still in print.
+
+  The RUSSIAN DRAUGHTS game (or SHASHKI) is essentially the same as
+POOL DRAUGHTS with one difference - a man is crowned instantly on
+entering the king-row, and can then go on to make futher leaps AS A
+KING within the same turn. These are called FLYING KINGS.
+
+  Well, that's the rules. Confused? This sort of thing is easier to
+see than describe, so play some experimental games, or set AUTO-PLAY
+and watch the computer play itself!
+
+=======================================================================================================
+
+   PORTABLE DRAUGHTS NOTATION - A PGN FORMAT FOR CHECKERS   (Original Proposal!)
+
+For my new program SAGE 4000 I have implemented a new database format called 
+PDN - Portable Draughts Notation - based on the Chess Portable Chess 
+Notation.
+I hope this proposal will get round the mess of different formats
+between programs - at the moment draughts programs cannot talk
+to each other, and there is no easy way for players to EMAIL each other
+games which can be readily imported into the users own program, without
+tedious re-typing. In the Chess world PGN has revolutionised the
+way game-info is used and published - players keep & exchange databases
+with thousand of games.
+Some simple samples are given below. In essence, after playing a game on
+S4000 it can be annotated - either on individual moves, or in the "header"
+detailing Players, Year, ELO, Result code, Event/other details - 
+and then exported to a PDN file - if the file already exists, the new
+game is appended to the database. I can then be reloaded later - by
+selecting the nth game from the database, or with more sophisticated
+DB list/search functions. While playing the game, the PDN info is displayed
+in the move-list window.
+There are a few differences to the Chess format - moves are given in
+standerd numeric notation - multijumps can either be specified
+move-by-move (11x18 18x25) or in 1 go (11x25). Moves can be formatted
+thus: 11-18, 11x18, 1118  - All legal possibilities. I suppose we
+can support c3-e5 later too. Move numbers end in a '.'
+to differenciate from game-moves. The 4 standerd result codes 
+       "1-0" "1/2-1/2" "0-1" "*" (game unfinished)
+are given from the aspect of the 1st side to move - Black in
+english draughts, White in Italian (S4000 plays DAMA ITALIANA too).
+The result code MUST appear at the end of the game - this is the
+game-terminator. Comments appear in {} brackets.
+If a game starts from a set-up position, a FEN header is given
+with the position - ie..
+[SetUp "1"]  [FEN "W:WK4,30:B27,22."]
+The FEN format must be "SIDE_TO_MOVE:W(pieces):B(pieces)."
+A K indicates a king.
+As I said, get the PGNSTD doc for full info on PGN. I welcome
+feedback on this issue!
+
+----SAMPLE PDN FORMAT FILE ENGLISH CHECKERS - TEST.PDN -----------------
+[Event "Double Corner Dyke"]
+[Black "Jordan,A"]
+[White "Tesheliet,F"]
+[Result "1/2-1/2"]
+
+1.  9-14 22-17 2. 11-15 25-22 3. 15-19 {Forms the Double Corner Dyke, With
+ black aiming to occupy sqr 19, attacking white's double corner.} 23x16 
+4. 12x19 24x15 5. 10x19 17x10 6.  6x15 21-17 7.  5-9 29-25 8.  8-12 25-21 
+9.  7-10 17-13 10.  1-6 {It seems unwise to abondon the key back row sqr 1,
+ but it is necessary to prevent 13-9..} 27-24 11.  4-8 32-27 12.  9-14 
+27-23 13.  3-7 23x16 14. 12x19 22-17 15.  7-11 26-23 16. 19x26 30x23 
+17.  8-12 24-20 18. 15-18 23-19 19. 11-15 20-16 20. 15x24 28x19 21.  2-7 
+31-26 22. 18-23 26-22 23. 23-27 16-11 {! a really beautiful escape} 
+24.  7x23 22-18 1/2-1/2
+
+[Event "Demo Game"]
+[Black "Seton,J"]
+[White "Wyllie,J"]
+[Result "1-0"]
+
+1. 11-15 24-20 2.  8-11 28-24 3.  4-8 23-19 4. 15-18 22x15 5. 11x18 32-28 
+6. 10-14 26-23 7.  9-13 19-15 8.  7-11 31-26 9.  2-7 26-22 10. 13-17 22x13 
+11.  6-9 13x6 12.  1x26 30x23 13. 11-15 25-22 14. 18x25 29x22 15.  7-10 
+23-19 16.  5-9 22-17 17.  9-13 20-16 18. 13x22 16-11 19. 22-26 11x4 
+20. 26-31  4-8 21.  3-7  8-3 22. 31-26 19-16 23. 12x19 27-23 24. 26-22 
+23x16 25. 22-18  3-8 {For the benifit of spectators, Wyllie plays out the
+ nice end shot - can you see it?} 26.  7-11 16x7 27. 15-19 24x6 28. 14-17 
+21x14 29. 18x4 28-24 30.  4-8 24-19 31.  8-11 19-15 32. 11x18 1-0
+
+[Event "Andersons 1st position trunk"]
+[Result "1-0"]
+[SetUp "1"]
+[FEN "W:WK4,30:B27,22."]
+
+1. 4-8 27-32 2. 8-11 32-27 3. 11-7 27-23 {etc to Black win..} 1-0
+
+
+=======================================================================================================
+
+ADDITIONAL TECH NOTES, COMPILING ETC (2024)
+
+As mentioned before, DYNAMO can also be configured to play unusual board 
+sizes like 12x10, 10x8, 9x9, etc. From the title screen you select the
+game variant (which determines the rules), then adjust the Width (X) and 
+Height (Y) parameters, and adjust the number of men to match. So for
+International with 12x10 board, 24 men is the right amount. A game with
+9x9 and 13 men gives you 4 double corners, or if you set corner to 1, 
+4 single corners. Also 11x11 with 22 men is an interesting variant.
+Its useful to select such a variant, and watch the computer auto-play.
+
+The source code is included with the executables. Sadly it is not very neat, 
+but even so I felt it worth publishing it, since it was a fairly common 
+shareware program in its day. It currently is configured to compile 
+under Microsoft Visual C 1.52, which is a 16 bit C compiler.
+You can open and compile using DYNA2k.MAK project file.
+You can build by the command line using the batch file clmak15m.bat
+    clmak15m d:\msvc15 dyna80.c       (Change path for MSVC for your PC)
+(You will need a 32 bit windows compatible command line, or WINE..)
+I did start to make a portable 32 bit Windows/Linux version, but its not finished.
+
+For Engine testing: Run DYNA2K.EXE then PLAY, then: /V0 <ENTER> H0 <ENTER> B0 <ENTER> T0 <ENTER> I100 <ENTER>
+for fixed depth IQ=100, no book, randomisation etc. Then autoplay (from new) should be: 
+   31-27 (178597 nodes) 19-23 (206509 node) 33-28 (133177 node) 17-22 (194059 node)
+(new console test version should have the same nodecount.)
+
+  The new console/text only version in the WIN32 folder is a "work in progress".
+It is an attempt to untangle the engine code and write a new front end. 
+The text board display in it is for debugging purposes, and
+most of the front end features have been taken out. 
+To run in windows, open up a windows console, go to the directory with the
+extracted files and type: 
+    dynamo 
+Similarly for Linux, type: 
+    ./dynamo.elf 
+There is a help screen in the program - enter: h <ENTER>
+You enter moves in the same way as the DOS version, ie: 32-28 <ENTER>
+To watch it autoplay 10 moves hit: a <ENTER>
+
+  I have included executables for 32 bit Windows and Linux, but if your 
+computer has a C compiler you can build your own simply with:
+    cc -o dynamo.elf dynamo.c -Os
+As mentioned before, this version will be probably about 100x faster than 
+running the DOS version in a DOSBOX type emulator.
+
+Anyway I hope you enjoy experimenting with DYNAMO!
