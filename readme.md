@@ -11,7 +11,7 @@ You can view more details and a manual here:
 <https://github.com/orac81/Orac-Draughts/blob/main/dynamo.txt>
 
 Screenshot:
-
+<img src="https://github.com/orac81/Orac-Draughts/blob/main/dyna2k1.png">
 
 ## ORAC DRAUGHTS
 
