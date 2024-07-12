@@ -12,6 +12,8 @@ Download dynamo v9.18 with source:
 
 ORAC is a (fairly) strong open-source 6502 checkers playing program. Its was originally written a long time ago for the PET, then later adapted for the Commodore 64, C16/+4 and VIC20. 
 
+<https://github.com/orac81/Orac-Draughts/raw/main/orac523.zip>
+
 Main files in this archive:
 
 ```
