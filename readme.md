@@ -1,3 +1,12 @@
+## DRAUGHTS SOFTWARE
+
+Below are details on ORAC DRAUGHTS, a checkers playing program for 6502 computers. 
+Also here you will find DYNAMO DRAUGHTS, (with source) a program that plays International 10x10 draughts and related variants. 
+Download dynamo v9.18 with source:
+  <https:www.github.com/orac81/dyna918a.zip>
+  
+
+
 ## ORAC DRAUGHTS
 
 
