@@ -2,12 +2,13 @@
 
 Below are details on some different checkers playing engines I have written over time.
 ## DYNAMO DRAUGHTS 
-DYNAMO DRAUGHTS is a program that plays International 10x10 draughts and related variants. It was widely featured on many magazine cover disks and shareware libraries back in the 1990s. The original DOS version is included, together with a text version for win32 and linux, which works with C99 compatible compilers.
+DYNAMO DRAUGHTS is a program that plays International 10x10 draughts and related variants. It is moderately strong, has many features not found on modern programs, and it was widely featured on many magazine cover disks and shareware libraries back in the 1990s. The original DOS version is included, together with a text version for win32 and linux, which works with C99 compatible compilers.
 
 Download dynamo v9.18 with source:
   <https://github.com/orac81/Orac-Draughts/raw/main/dyna918a.zip>
   
 You can view more details and a manual here:
+
 <https://github.com/orac81/Orac-Draughts/blob/main/dynamo.txt>
 
 Screenshot:
