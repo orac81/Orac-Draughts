@@ -14,6 +14,15 @@ You can view more details and a manual here:
 Screenshot:
 <img src="https://github.com/orac81/Orac-Draughts/blob/main/dyna2k1.png">
 
+## SAGE DRAUGHTS
+
+I will release the source to SAGE soon. you can download the last version from:
+
+<https://web.archive.org/web/20041204211909/http://www.chessandcheckers.com/sage.htm>
+
+The activation key for SAGE is: 4QGU5D9SAGE2DRAUGHTS
+
+
 ## ORAC DRAUGHTS
 
 
