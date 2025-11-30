@@ -4,6 +4,8 @@ Below are details on some different checkers playing engines I have written over
 
 ## SAGE DRAUGHTS
 
+<img src="https://raw.githubusercontent.com/orac81/Orac-Draughts/refs/heads/main/sage/sage-screen1.png">
+
 SAGE is a 32 bit Windows program, which should run on any version from XP up to Windows 11. It can can run under LINUX or MAC-OS using a windows emulator like WINE. It can be installed by simply downloading and extracting the zip file. To run, open the SAGE folder and click/run SAGE.EXE.
 
 For full help, open the HTML file "doc/sagedoc1.htm" in the SAGE folder.
