@@ -1,5 +1,10 @@
-  SAGE DRAUGHTS USER MANUAL
-  -------------------------
+## SAGE DRAUGHTS
+
+<img src="https://raw.githubusercontent.com/orac81/Orac-Draughts/refs/heads/main/sage/sage-screen1.png">
+
+Download the latest version of SAGE (10.346) with source and executable:
+  <https://github.com/orac81/Orac-Draughts/raw/refs/heads/main/sage/sage-draughts-latest.zip>
+
 
 SAGE DRAUGHTS is released as free software under the GNU GPL-3 Software license. 
 For latest version, source and more details see the Github page: https://github.com/orac81/Orac-Draughts
