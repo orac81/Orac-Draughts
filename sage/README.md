@@ -12,7 +12,6 @@ The software supplied "as-is" with no warranty.
 
 SAGE is a 32 bit Windows program, which should run on any version from XP up to Windows 11. It can can run under LINUX or MAC-OS using a windows emulator like WINE. It can be installed by simply downloading and extracting the zip file. To run, open the SAGE folder and click/run SAGE.EXE.
 
-For full help, open the HTML file "doc/sagedoc1.htm" in the SAGE folder.
 
 SAGE is one of the most comprehensive Checker playing programs available. Not only can it play a strong game, but it also provides advanced features such as PDN Game Databases, advanced game analysis, annotation, autolearning, and much more. Despite its wealth of features, it is very easy to use, anyone who knows how to use a standard Windows program should have no problems with SAGE's simple interface. It can play both the English and Italian variant of the game, up to Master level. 
 
@@ -121,4 +120,10 @@ When SAGE is computing, it shows information on what it is thinking about are in
     Nodes: The number of search-tree "terminal" nodes encountered so far.
     Eval: Approximate score for the best move so far. One point (1.00) is roughly equal to a king at the start of the game, and a man towards the end of the game. A positive score means white is ahead, a negative score means black is ahead. When the best line leads to an "endgame database" position (ie <=6 pieces) then a score of <-6.00 means Black is winning, a score of >6.00 means White is winning, a score of around 0.00 means that the position is drawn.
     Best Line: This is the line of play that the computer thinks is "best" from the current position.
+
+
+
+
+For full help, open the HTML file "doc/sagedoc1.htm" in the SAGE folder.
+
 
