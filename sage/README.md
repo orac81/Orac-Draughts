@@ -6,9 +6,6 @@ Download the latest version of SAGE (10.346) with source and executable:
   <https://github.com/orac81/Orac-Draughts/raw/refs/heads/main/sage/sage-draughts-latest.zip>
 
 
-SAGE DRAUGHTS is released as free software under the GNU GPL-3 Software license. 
-For latest version, source and more details see the Github page: https://github.com/orac81/Orac-Draughts
-The software supplied "as-is" with no warranty. 
 
 SAGE is a 32 bit Windows program, which should run on any version from XP up to Windows 11. It can can run under LINUX or MAC-OS using a windows emulator like WINE. It can be installed by simply downloading and extracting the zip file. To run, open the SAGE folder and click/run SAGE.EXE.
 
@@ -138,6 +135,11 @@ A large opening book, and the small 4 piece "perfect" endgame databases are incl
 <http://www.cs.ualberta.ca/~chinook/DataBases/DB6.zip>
 
 To compile the source code you need Microsoft Visual C 4.2. The batch file "src/sagemake bat" will build it. you need to give it the root directory of MSVC as the first parameter.
+
+
+SAGE DRAUGHTS is released as free software under the GNU GPL-3 Software license. 
+For latest version, source and more details see the Github page: https://github.com/orac81/Orac-Draughts
+The software supplied "as-is" with no warranty. 
 
 
 This document is "work in progress!"
