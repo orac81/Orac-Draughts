@@ -127,7 +127,9 @@ When SAGE is computing, it shows information on what it is thinking about are in
     Best Line: This is the line of play that the computer thinks is "best" from the current position.
 
 
-_____________________________________
+***
+
+## END NOTES
 
 For full help, open the HTML file "doc/sagedoc1.htm" in the SAGE folder.
 
@@ -138,4 +140,5 @@ To compile the source code you need Microsoft Visual C 4.2. The batch file "src/
 
 
 This document is "work in progress!"
-_____________________________________
+
+***
