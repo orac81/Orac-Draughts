@@ -12,12 +12,15 @@ The software supplied "as-is" with no warranty.
 
 SAGE is a 32 bit Windows program, which should run on any version from XP up to Windows 11. It can can run under LINUX or MAC-OS using a windows emulator like WINE. It can be installed by simply downloading and extracting the zip file. To run, open the SAGE folder and click/run SAGE.EXE.
 
+_____________________________________
 
 SAGE is one of the most comprehensive Checker playing programs available. Not only can it play a strong game, but it also provides advanced features such as PDN Game Databases, advanced game analysis, annotation, autolearning, and much more. Despite its wealth of features, it is very easy to use, anyone who knows how to use a standard Windows program should have no problems with SAGE's simple interface. It can play both the English and Italian variant of the game, up to Master level. 
 
 On running, SAGE presents some version information, and asks you to select (Play) or (Reset) If you select (Reset) SAGE resets all its parameters and settings. If you select (Play) it remembers the Game, Engine settings, screen layout and colours from the last time you used it. You are now ready to play SAGE! The main SAGE screen consists of the Board, Move record, Search info, and Book windows, conventional Windows pull down menus, and quick-access toolbar buttons along the top of the screen. These buttons co-relate to menu functions – when you position the mouse on a button, a description of the menu function will appear.
 
 Playing SAGE is very simple - start a new game by selecting Files/New Game menu or click on the New Game toolbar button. At this stage you can also select English Checkers, Dama Italiana or other Draughts variants. Now select the computer thinking time with the Play/Play Levels menu, or select the Play Levels toolbar button - and enter a response time. You are now ready to move - just click the LEFT MOUSE BUTTON on the piece you want to move, drag it to the destination square and release it. If the piece could only move one way, its move is automatic as soon as you click the piece. You can also enter the move by typing in a 4 digit number with the source/destination - keeping leading zeros. Thus to move 4-8 you would type 0408. As you play, SAGE will tell you information about the opening - it will display the code for the opening, together with the name. Let us now go through the available menu options..
+
+_____________________________________
 
 Files Menu
 
@@ -98,7 +101,9 @@ Database menu
     User book add line - Adds current game to opening book.
     Import book text - Automatically merge a number of book lines from a text file into the current book. The text file can be either in PDN format, or the old sbook/ibook.txt format used in previous SAGE/DAMA ITALIANA programs.
 
-Many of these mrnu functions can be accessed quickly through the TOOLBAR - just place the mouse over any toolbar option and a text describing the function of it will appear..
+Many of these menu functions can be accessed quickly through the TOOLBAR - just place the mouse over any toolbar option and a text describing the function of it will appear..
+
+_____________________________________
 
 Other non-menu functions
 
@@ -108,7 +113,7 @@ Double click left mouse on book field in book window. Dialog box alters strength
 
 + or - to adjust move time (seconds per move) quickly.
 
- 
+ _____________________________________
 
 Search info format
 
@@ -124,11 +129,11 @@ When SAGE is computing, it shows information on what it is thinking about are in
 
 _____________________________________
 
+For full help, open the HTML file "doc/sagedoc1.htm" in the SAGE folder.
+
 
 To compile the source code you need Microsoft Visual C 4.2. The batch file "src/sagemake bat" will build it. you need to give it the root directory of MSVC as the first parameter.
 
-
-For full help, open the HTML file "doc/sagedoc1.htm" in the SAGE folder.
 
 This document is "work in progress!"
 _____________________________________
