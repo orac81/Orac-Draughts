@@ -19,6 +19,8 @@ A large opening book, and the small 4 piece endgame databases are included.
 To read more:
 <https://github.com/orac81/Orac-Draughts/blob/main/sage/README.md>
 
+_____________________________________
+
 
 ## DYNAMO DRAUGHTS 
 DYNAMO DRAUGHTS is an open source program that plays International (10x10), Canadian (12x12), Spanish, American Pool, Portugese and Russian (8x8) games. It is moderately strong, has many features not found on modern programs, and it was widely featured on many magazine cover disks and shareware libraries back in the 1990s. The original DOS version is included, together with a text/console version for win32 and linux, which compiles with C99 compatible compilers.
@@ -32,6 +34,8 @@ You can view more details and a manual here:
 
 Screenshot:
 <img src="https://github.com/orac81/Orac-Draughts/blob/main/dyna2k1.png">
+
+_____________________________________
 
 
 ## ORAC DRAUGHTS
