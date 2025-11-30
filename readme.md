@@ -15,7 +15,8 @@ To run, open the SAGE folder and click/run SAGE.EXE.
 
 SAGE is one of the most comprehensive Checker playing programs available. Not only can it play a strong game, but it also provides advanced features such as PDN Game Databases, advanced game analysis, annotation, autolearning, and much more. Despite its wealth of features, it is very easy to use, anyone who knows how to use a standard Windows program should have no problems with SAGE's simple interface. It can play both the English and Italian variant of the game, up to Master level. 
 A large opening book, and the small 4 piece endgame databases are included.
-<https://raw.githubusercontent.com/orac81/Orac-Draughts/sage/README.md>
+<sage/README.md>
+<https://github.com/orac81/Orac-Draughts/blob/main/sage/README.md>
 
 ## DYNAMO DRAUGHTS 
 DYNAMO DRAUGHTS is an open source program that plays International (10x10), Canadian (12x12), Spanish, American Pool, Portugese and Russian (8x8) games. It is moderately strong, has many features not found on modern programs, and it was widely featured on many magazine cover disks and shareware libraries back in the 1990s. The original DOS version is included, together with a text/console version for win32 and linux, which compiles with C99 compatible compilers.
