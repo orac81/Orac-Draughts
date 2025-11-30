@@ -1,6 +1,17 @@
 ## DRAUGHTS SOFTWARE
 
 Below are details on some different checkers playing engines I have written over time.
+
+## SAGE DRAUGHTS
+
+SAGE is a 32 bit Windows program, which should run on any version from XP up to Windows 11. It can can run under LINUX or MAC-OS using a windows emulator like WINE. It can be installed by simply downloading and extracting the zip file. To run, open the SAGE folder and click/run SAGE.EXE.
+
+For full help, open the HTML file "doc/sagedoc1.htm" in the SAGE folder.
+
+SAGE is one of the most comprehensive Checker playing programs available. Not only can it play a strong game, but it also provides advanced features such as PDN Game Databases, advanced game analysis, annotation, autolearning, and much more. Despite its wealth of features, it is very easy to use, anyone who knows how to use a standard Windows program should have no problems with SAGE's simple interface. It can play both the English and Italian variant of the game, up to Master level. 
+DRAUGHTS
+
+
 ## DYNAMO DRAUGHTS 
 DYNAMO DRAUGHTS is an open source program that plays International (10x10), Canadian (12x12), Spanish, American Pool, Portugese and Russian (8x8) games. It is moderately strong, has many features not found on modern programs, and it was widely featured on many magazine cover disks and shareware libraries back in the 1990s. The original DOS version is included, together with a text/console version for win32 and linux, which compiles with C99 compatible compilers.
 
@@ -13,14 +24,6 @@ You can view more details and a manual here:
 
 Screenshot:
 <img src="https://github.com/orac81/Orac-Draughts/blob/main/dyna2k1.png">
-
-## SAGE DRAUGHTS
-
-I will release the source to SAGE soon. you can download the last version from:
-
-<https://web.archive.org/web/20041204211909/http://www.chessandcheckers.com/sage.htm>
-
-The activation key for SAGE is: 4QGU5D9SAGE2DRAUGHTS
 
 
 ## ORAC DRAUGHTS
