@@ -1,17 +1,19 @@
 ## DRAUGHTS SOFTWARE
 
-Below are details on some different checkers playing engines I have written over time.
+Below are details on some different checkers playing programs I have written over time.
 
 ## SAGE DRAUGHTS
 
 <img src="https://raw.githubusercontent.com/orac81/Orac-Draughts/refs/heads/main/sage/sage-screen1.png">
 
-SAGE is a 32 bit Windows program, which should run on any version from XP up to Windows 11. It can can run under LINUX or MAC-OS using a windows emulator like WINE. It can be installed by simply downloading and extracting the zip file. To run, open the SAGE folder and click/run SAGE.EXE.
+SAGE is a 32 bit Windows program, which should run on any version from XP up to Windows 11. It can run under LINUX or MAC-OS using a Windows emulator like WINE. It can be installed by simply downloading and extracting the zip file. 
 
-For full help, open the HTML file "doc/sagedoc1.htm" in the SAGE folder.
+Download the latest version SAGE DRAUGHTS with source:
+  <https://github.com/orac81/Orac-Draughts/raw/refs/heads/main/sage/sage-draughts-latest.zip>
+
+To run, open the SAGE folder and click/run SAGE.EXE.
 
 SAGE is one of the most comprehensive Checker playing programs available. Not only can it play a strong game, but it also provides advanced features such as PDN Game Databases, advanced game analysis, annotation, autolearning, and much more. Despite its wealth of features, it is very easy to use, anyone who knows how to use a standard Windows program should have no problems with SAGE's simple interface. It can play both the English and Italian variant of the game, up to Master level. 
-DRAUGHTS
 
 
 ## DYNAMO DRAUGHTS 
