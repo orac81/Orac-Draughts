@@ -135,7 +135,7 @@ For full help, open the HTML file "doc/sagedoc1.htm" in the SAGE folder.
 
 A large opening book, and the small 4 piece "perfect" endgame databases are included. SAGE will work with the Chinook 6 piece endgame databases, just download them from the Chinook webpage and extract the "db6" and "db6.idx" files to the Sage folder.
 
-<webdocs.cs.ualberta.ca/~chinook/databases>
+<http://www.cs.ualberta.ca/~chinook/DataBases/DB6.zip>
 
 To compile the source code you need Microsoft Visual C 4.2. The batch file "src/sagemake bat" will build it. you need to give it the root directory of MSVC as the first parameter.
 
